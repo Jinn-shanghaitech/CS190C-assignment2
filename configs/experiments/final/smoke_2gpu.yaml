@@ -1,0 +1,23 @@
+seed: 42
+output_dir: outputs/final/smoke_2gpu
+
+dataset_name: roneneldan/TinyStories
+dataset_config_name: null
+tokenizer_name_or_path: roneneldan/TinyStories-33M
+
+block_size: 128
+num_preprocessing_workers: 2
+
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 2
+gradient_accumulation_steps: 1
+
+learning_rate: 0.0005
+weight_decay: 0.1
+warmup_ratio: 0.02
+
+max_train_steps: 10
+eval_every_steps: 5
+save_every_steps: 10
+logging_every_steps: 1
+max_grad_norm: 1.0
